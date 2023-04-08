@@ -1,9 +1,28 @@
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const { user } = useState();
+  const headerRef = useRef(null);
+  const stickyHeaderFC = () => {
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        headerRef.current.classList.add("sticky_Nab");
+      } else {
+        headerRef.current.classList.remove("sticky_Nab");
+      }
+    });
+  };
+  useEffect(() => {
+    stickyHeaderFC();
+    return () => window.removeEventListener("scroll", stickyHeaderFC);
+  }, []);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const menuItems = (
     <React.Fragment>
       <li>
@@ -20,26 +39,17 @@ const Navbar = () => {
         <Link to="/about">About</Link>
       </li>
       <li>
-        <Link to="/furntiture">Furntiture</Link>
+        <Link to="/contact">Contact</Link>
       </li>
 
-      {user?.uid ? (
-        <>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li>{/* <button onClick={handleLogOut}>Sign out</button> */}</li>
-        </>
-      ) : (
-        <li>
-          <Link to="/login">Login</Link>
-          <Link to="/singup">Sing UP</Link>
-        </li>
-      )}
+      <li>
+        <Link to="/login">Login</Link>
+        <Link to="/singup">Sing UP</Link>
+      </li>
     </React.Fragment>
   );
   return (
-    <div>
+    <div ref={headerRef}>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -107,7 +117,7 @@ const Navbar = () => {
                   d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
                 />
               </svg>
-              <span className="bagline">1</span>
+              <span className="bagline">{totalQuantity}</span>
             </span>
           </Link>
         </div>

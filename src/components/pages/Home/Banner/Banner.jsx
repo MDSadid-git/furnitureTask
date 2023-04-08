@@ -2,9 +2,9 @@ import React from "react";
 import img1 from "../../../../Assets/images/arm-chair-01.jpg";
 import img2 from "../../../../Assets/images/arm-chair-02.jpg";
 import img3 from "../../../../Assets/images/arm-chair-03.jpg";
-import img4 from "../../../../Assets/images/arm-chair-01.jpg";
-import img5 from "../../../../Assets/images/arm-chair-02.jpg";
-import img6 from "../../../../Assets/images/arm-chair-03.jpg";
+import img4 from "../../../../Assets/images/single-sofa-01.jpg";
+import img5 from "../../../../Assets/images/single-sofa-02.jpg";
+import img6 from "../../../../Assets/images/single-sofa-03.jpg";
 import BannerItem from "../BannerItem/BannerItem";
 
 const bannerData = [
@@ -47,7 +47,7 @@ const bannerData = [
 ];
 const Banner = () => {
   return (
-    <div className="carousel w-full pb-5">
+    <div className="carousel w-full pb-5 my-10">
       {bannerData.map((slide) => (
         <BannerItem slide={slide} key={slide.id}></BannerItem>
       ))}

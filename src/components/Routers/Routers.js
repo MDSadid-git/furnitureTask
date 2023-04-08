@@ -3,13 +3,14 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../pages/Home/Home";
 import DisplayError from "../shared/MYError/DisplayError";
-import Furniture from "../pages/Furniture/Furniture";
+import ContactForm from "../pages/Home/contactForm/ContactForm";
 import Cart from "../pages/Cart/Cart";
 import Productdetails from "../pages/ProductDetails/Productdetails";
-import Checkout from "../pages/Checkout/Checkout";
+
 import Shop from "../pages/Shop/Shop";
 import Login from "../login/Login";
 import Singup from "../singup/Singup";
+import About from "../pages/About/About";
 
 const Router = createBrowserRouter([
   {
@@ -22,8 +23,8 @@ const Router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/furntiture",
-        element: <Furniture />,
+        path: "/contact",
+        element: <ContactForm />,
       },
       {
         path: "/shop",
@@ -38,8 +39,8 @@ const Router = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: "/checkout",
-        element: <Checkout />,
+        path: "/about",
+        element: <About />,
       },
       {
         path: "/login",

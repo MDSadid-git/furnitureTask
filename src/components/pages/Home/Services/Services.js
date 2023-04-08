@@ -2,9 +2,9 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="my-5">
-      <div className="grid grid-cols-4 items-center gap-5">
-        <div className="flex items-center  bg-amber-300 p-3 rounded-lg ">
+    <div className="m-5">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-5">
+        <div className="flex items-center  bg-amber-300 p-3 rounded-lg hover:scale-105">
           <div className="bg-slate-200 p-3 rounded-full mr-3">
             <samp className="">
               <svg
@@ -24,11 +24,11 @@ const Services = () => {
             </samp>
           </div>
           <div>
-            <h1>Free Shipping</h1>
+            <h1 className="font-bold">Free Shipping</h1>
             <p>We give your best Produts</p>
           </div>
         </div>
-        <div className="flex items-center  bg-amber-300 p-3 rounded-lg ">
+        <div className="flex items-center  bg-red-300 p-3 rounded-lg hover:scale-105">
           <div className="bg-slate-200 p-3 rounded-full mr-3">
             <samp className="">
               <svg
@@ -48,11 +48,11 @@ const Services = () => {
             </samp>
           </div>
           <div>
-            <h1>Easy Returns</h1>
+            <h1 className="font-bold">Easy Returns</h1>
             <p>We give your best Produts</p>
           </div>
         </div>
-        <div className="flex items-center  bg-amber-300 p-3 rounded-lg ">
+        <div className="flex items-center  bg-orange-300 p-3 rounded-lg hover:scale-105">
           <div className="bg-slate-200 p-3 rounded-full mr-3">
             <samp className="">
               <svg
@@ -72,11 +72,11 @@ const Services = () => {
             </samp>
           </div>
           <div>
-            <h1>Secure Payment</h1>
+            <h1 className="font-bold">Secure Payment</h1>
             <p>We give your best Produts</p>
           </div>
         </div>
-        <div className="flex items-center  bg-amber-300 p-3 rounded-lg ">
+        <div className="flex items-center  bg-lime-300 p-3 rounded-lg hover:scale-105">
           <div className="bg-slate-200 p-3 rounded-full mr-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const Services = () => {
             </svg>
           </div>
           <div>
-            <h1>Back Guarantee</h1>
+            <h1 className="font-bold">Back Guarantee</h1>
             <p>We give your best Produts</p>
           </div>
         </div>
