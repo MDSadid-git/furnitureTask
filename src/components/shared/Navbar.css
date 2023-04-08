@@ -1,0 +1,26 @@
+.bagIcon {
+  position: relative;
+}
+.heartIcon {
+  position: relative;
+}
+.bagline {
+  position: absolute;
+  top: -25%;
+  right: -5%;
+  width: 15px;
+  height: 15px;
+  background: black;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  z-index: 10;
+}
+.heartIcon {
+  top: 25%;
+  right: 20%;
+}
