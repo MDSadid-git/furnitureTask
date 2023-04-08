@@ -28,6 +28,7 @@ const Home = () => {
       <Banner />
       <Services />
       <ProductsList data={trending} text="Trending Products" />
+
       <ProductsList data={bestSales} text="Best sales Products" />
       <Shop />
       <CountDown />
