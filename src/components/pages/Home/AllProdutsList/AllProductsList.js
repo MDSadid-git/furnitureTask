@@ -17,7 +17,7 @@ const products = [
     id: "01",
     productName: "Stone and Beam Westview ",
     imgUrl: productImg01,
-    category: "sofa",
+    category: "Dsofa",
     price: 193,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -36,7 +36,7 @@ const products = [
     id: "02",
     productName: "Rivet Bigelow Modern ",
     imgUrl: productImg02,
-    category: "sofa",
+    category: "Dsofa",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -59,7 +59,7 @@ const products = [
     id: "03",
     productName: "Amazon Brand Modern Sofa",
     imgUrl: productImg03,
-    category: "sofa",
+    category: "Dsofa",
     price: 173,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -81,7 +81,7 @@ const products = [
     id: "26",
     productName: "Rivet Bigelow Modern ",
     imgUrl: productImg02,
-    category: "sofa",
+    category: "Dsofa",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -279,7 +279,7 @@ const products = [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
     ],
-    avgRating: 4.7,
+    avgRating: 4.9,
   },
 ];
 

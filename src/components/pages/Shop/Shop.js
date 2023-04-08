@@ -18,10 +18,32 @@ const Shop = () => {
       const filterProducts = products.filter(
         (item) => item.category === "Dsofa"
       );
-      setProdutsData(null);
+      setProdutsData(filterProducts);
+    }
+    if (filterValue === "chair") {
+      const filterProducts = products.filter(
+        (item) => item.category === "chair"
+      );
+      setProdutsData(filterProducts);
     }
   };
-  console.log(handleFilter);
+  const handleFilterShort = (e) => {
+    const filterValue = e.target.value;
+    console.log(filterValue);
+    if (filterValue === 4.5) {
+      const filterProducts = products.filter((item) => item.avgRating === 4.5);
+      setProdutsData(filterProducts);
+    }
+    if (filterValue === 4.7) {
+      const filterProducts = products.filter((item) => item.avgRating === 4.7);
+      setProdutsData(filterProducts);
+    }
+    if (filterValue === 4.9) {
+      const filterProducts = products.filter((item) => item.avgRating === 4.9);
+      setProdutsData(filterProducts);
+    }
+  };
+  console.log(handleFilterShort);
   return (
     <div>
       <div className="text-center my-32">
@@ -32,21 +54,26 @@ const Shop = () => {
               className="select select-info w-full max-w-xs"
               onChange={handleFilter}
             >
-              <option>Filter By Category</option>
+              <option disabled selected>
+                Filter By Category
+              </option>
               <option value={"sofa"}>Sofa</option>
               <option value={"Dsofa"}>Dabul Sofa</option>
-              <option value={"Csofa"}>chair</option>
+              <option value={"chair"}>chair</option>
             </select>
           </div>
 
           <div>
-            <select className="select select-info w-full max-w-xs">
+            <select
+              onChange={handleFilterShort}
+              className="select select-info w-full max-w-xs"
+            >
               <option disabled selected>
                 Sort By
               </option>
-              <option>English</option>
-              <option>Japanese</option>
-              <option>Italian</option>
+              <option value={4.5}>4.5</option>
+              <option value={4.7}>4.7</option>
+              <option value={4.9}>4.9</option>
             </select>
           </div>
         </div>
